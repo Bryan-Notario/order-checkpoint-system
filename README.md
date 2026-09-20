@@ -74,7 +74,19 @@ docker compose up -d
 
 ## 📸 Capturas
 
-*(Aquí puedes agregar 2-3 screenshots de la app funcionando)*
+## 📸 Capturas
+
+### Selector de estación
+![Selector de rol](screenshots/seleccion-rol.png)
+
+### Generación de pedido con QR
+![Generación de pedido](screenshots/generar-pedido.png)
+
+### Verificación de paquete
+![Verificación](screenshots/verificacion.png)
+
+### Reporte en PDF
+![Reporte PDF](screenshots/tabla-pedidos.png)
 
 ## 🧠 Decisiones técnicas destacadas
 
