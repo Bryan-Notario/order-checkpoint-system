@@ -1,0 +1,331 @@
+/* ===================================================
+   RESET Y BASE
+   =================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #1a1a1a;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.App > h1 {
+  text-align: center;
+  color: #022142;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* ===================================================
+   TARJETAS (contenedores de cada sección)
+   =================================================== */
+.formulario-qr,
+.tabla-pedidos,
+.verificador {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.formulario-qr h2,
+.tabla-pedidos h2,
+.verificador h2 {
+  color: #022142;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #022142;
+  padding-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+/* ===================================================
+   FORMULARIOS
+   =================================================== */
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #022142;
+}
+
+button {
+  background-color: #022142;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #001529;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===================================================
+   ALERTAS
+   =================================================== */
+.alerta {
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.alerta.exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alerta.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* ===================================================
+   PREVIEW DEL QR
+   =================================================== */
+.qr-preview {
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qr-preview canvas {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+}
+
+.qr-preview button {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* ===================================================
+   TABLA DE PEDIDOS
+   =================================================== */
+.tabla-pedidos table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tabla-pedidos th,
+.tabla-pedidos td {
+  border: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.tabla-pedidos th {
+  background-color: #022142;
+  color: white;
+  font-weight: 600;
+}
+
+.tabla-pedidos tbody tr:nth-child(even) {
+  background-color: #f9f9fb;
+}
+
+.tabla-pedidos tbody tr:hover {
+  background-color: #eef3fa;
+}
+
+.tabla-pedidos button {
+  background-color: #cc0000;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.tabla-pedidos button:hover:not(:disabled) {
+  background-color: #a30000;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px 12px 40px;
+  }
+
+  .formulario-qr,
+  .tabla-pedidos,
+  .verificador {
+    padding: 20px;
+  }
+
+  .tabla-pedidos table,
+  .tabla-pedidos thead,
+  .tabla-pedidos tbody,
+  .tabla-pedidos th,
+  .tabla-pedidos td,
+  .tabla-pedidos tr {
+    display: block;
+  }
+
+  .tabla-pedidos thead {
+    display: none;
+  }
+
+  .tabla-pedidos tr {
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .tabla-pedidos td {
+    border: none;
+    padding: 6px 0;
+  }
+
+  .tabla-pedidos td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    color: #022142;
+  }
+}
+/* ===================================================
+   SELECCIÓN DE ROL
+   =================================================== */
+.seleccion-rol {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.seleccion-rol h1 {
+  color: #022142;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.tarjetas-rol {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-rol {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 30px;
+  width: 260px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.tarjeta-rol:hover {
+  border-color: #022142;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icono-rol {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.tarjeta-rol h2 {
+  color: #022142;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tarjeta-rol p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===================================================
+   HEADER DE CADA ESTACIÓN
+   =================================================== */
+.estacion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.estacion-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.volver-link {
+  color: #022142;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.volver-link:hover {
+  text-decoration: underline;
+}
